@@ -1,0 +1,6 @@
+docker-compose.yaml
+Dockerfile
+README.md
+.vscode
+node-api
+node-modules
