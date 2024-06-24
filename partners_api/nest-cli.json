@@ -5,6 +5,17 @@
   "compilerOptions": {
     "deleteOutDir": true
   },
+  "projects": {
+    "fixture": {
+      "type": "application",
+      "root": "src",
+      "entryFile": "fixture-commands",
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "tsConfigPath": "tsconfig.json"
+      }
+    }
+  },
   "watchOptions": {
     "watchFile": "fixedPollingInterval"
   }

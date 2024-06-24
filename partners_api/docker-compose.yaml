@@ -1,12 +1,25 @@
 services:
-  db:
+  nestjs-mysql:
     image: mysql:8.0.30-debian
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: nest
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  nestjs:
+    build: .
+    depends_on:
+      - nestjs-mysql
     ports:
-      - 3306:3306
-    volumes:
-      - dbdata:/var/lib/mysql
+      - 3001:3001
+    command: >
+      sh -c "npx prisma migrate dev &&
+             npm run start fixture &&
+             npm run start:dev"
+
 volumes:
   dbdata:

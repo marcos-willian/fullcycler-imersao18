@@ -14,11 +14,9 @@ import { AuthGuard } from './auth/auth.guard';
     EventsModule,
     SpotsModule,
     AuthModule,
-    ConfigModule.forRoot(
-      {
-        isGlobal: true,
-      }
-    ),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
   ],
   controllers: [],
   providers: [
@@ -26,9 +24,7 @@ import { AuthGuard } from './auth/auth.guard';
     {
       provide: APP_GUARD,
       useClass: AuthGuard,
-    }
+    },
   ],
-
-
 })
 export class AppModule { }

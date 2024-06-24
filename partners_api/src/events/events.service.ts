@@ -5,14 +5,12 @@ import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class EventsService {
-  constructor(private readonly dbService: PrismaService) { }
+  constructor(private readonly dbService: PrismaService) {}
 
   create(createEventDto: CreateEventDto) {
-    return this.dbService.event.create(
-      {
-        data: createEventDto,
-      }
-    );
+    return this.dbService.event.create({
+      data: createEventDto,
+    });
   }
 
   findAll() {

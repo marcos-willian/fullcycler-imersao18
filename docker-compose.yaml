@@ -1,0 +1,5 @@
+include:
+  - golang_system/docker-compose.yaml
+  - partners_api/docker-compose.yaml
+  - events_site/docker-compose.yaml
+  - kong-api-gateway/docker-compose.with-dbless.yaml

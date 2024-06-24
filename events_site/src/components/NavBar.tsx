@@ -10,7 +10,7 @@ export function NavBar() {
 
                 <Link href="/">
                     <Image
-                        src="/icone.svg"
+                        src="/nextjs/icone.svg"
                         alt="Icone DevTicket"
                         width={136}
                         height={48}
@@ -20,7 +20,7 @@ export function NavBar() {
             </div>
             <Link href="/checkout" className="grow-0">
                 <Image
-                    src="/cart-outline.svg"
+                    src="/nextjs/cart-outline.svg"
                     alt="Icone DevTicket"
                     width={136}
                     height={48}

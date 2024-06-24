@@ -74,6 +74,8 @@ export async function checkoutAction(prevState: any, {
         ticket_kind
     });
 
+
+
     if (!response.ok) {
         return { error: "Erro ao realizar a compra" };
     }

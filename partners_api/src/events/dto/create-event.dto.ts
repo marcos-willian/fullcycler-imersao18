@@ -1,5 +1,5 @@
 export class CreateEventDto {
-    name: string;
-    date: Date;
-    price: number;
+  name: string;
+  date: Date;
+  price: number;
 }

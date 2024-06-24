@@ -13,6 +13,9 @@ export async function Checkout(data: {
         body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json",
+            "apikey": process.env.API_TOKEN as string
+
         },
+
     });
 }

@@ -1,4 +1,4 @@
 export class ReserveSpotsDto {
-    spotNames: string[];
-    email: string;
+  spotNames: string[];
+  email: string;
 }
